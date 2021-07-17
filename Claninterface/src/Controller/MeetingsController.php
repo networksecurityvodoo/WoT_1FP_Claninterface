@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use App\Logic\Helper\MeetingsHelper;
+use App\Model\Entity\Player;
 
 /**
  * Meetings Controller
@@ -23,6 +24,8 @@ class MeetingsController extends AppController
         $this->set('meetings', $this->Meetings->find("all")->contain(["Clans"])->where(["date >=" => date("Y-m-d")]));
         $this->set('oldMeetings', $this->Meetings->find("all")->contain(["Clans"])->where(["date <" => date("Y-m-d")]));
         MeetingsHelper::findParticipant();
+
+        $this->set("Clans",$this->Meetings->Clans->find("all")->where(["cron" => 1]));
     }
 
     /**
@@ -105,6 +108,45 @@ class MeetingsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function eventlist($clan){
+
+        $this->set("Clan", $this->Meetings->Clans->get($clan));
+
+        $date = date("Y-m-d", strtotime( date( "Y-m-d", strtotime( date("Y-m-d") ) ) . "-1 month" ) );
+        $mt = $this->Meetings->find("all")->where(["clan_id"=> $clan, "date >="=> $date, "date <=" => date("Y-m-d")])->toArray();
+        $meetings = array();
+        $meetings_ids = array();
+        foreach ($mt as $m){
+            $meetings_ids[] =$m->id;
+            $meetings[$m->id] = $m;
+        }
+
+        $pl= $this->Meetings->Clans->Players->find("all")->contain(["Meetingparticipants"])->where(["clan_id"=>$clan])->orderAsc("rank_id");
+
+        $Players = array();
+        /**
+         * @var Player[] $pl
+         */
+        foreach ($pl as $p){
+
+            $data = array();
+            foreach($meetings_ids as $id){
+                $data[$id] = null;
+            }
+
+            foreach($p->meetingparticipants as $meetingparticipant) {
+                if (in_array($meetingparticipant->meeting_id, $meetings_ids)) {
+                    $data[$meetingparticipant->meeting_id] = $meetingparticipant;
+                }
+            }
+            $Players[$p->nick] = $data;
+        }
+
+        $this->set("Players",$Players);
+        $this->set("Meetings",$meetings);
+        $this->set("container", "container-fluid");
     }
 
     public function isAuthorized($user)

@@ -1,10 +1,15 @@
 <?php
 /**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Meeting[]|\Cake\Collection\CollectionInterface $meetings alle kommenden Meetings
- *  * @var \App\Model\Entity\Meeting[]|\Cake\Collection\CollectionInterface $oldMeetings alle vergangended Meetings
+ * @var AppView $this
+ * @var Meeting[]|CollectionInterface $meetings alle kommenden Meetings
+ * @var Meeting[]|CollectionInterface $oldMeetings alle vergangended Meetings
+ * @var Clan[] $Clans
  */
 
+use App\Model\Entity\Clan;
+use App\Model\Entity\Meeting;
+use App\View\AppView;
+use Cake\Collection\CollectionInterface;
 use Cake\I18n\Time;
 
 ?>
@@ -55,6 +60,15 @@ use Cake\I18n\Time;
         </tbody>
     </table>
 </div>
+<br />
+<div class="row">
+    <div class="col-12">
+        <h4>Teilnahmen an Veranstaltungen je Clan</h4>
+        <?php foreach ($Clans as $clan): ?>
+            <?= $this->Html->link($clan->short,["action"=> "eventlist",$clan->id],["class"=>"btn btn-dark"])?>
+        <?php endforeach; ?>
+    </div>
+</div>
 <br /><br />
 <div class="meetings index large-9 medium-8 columns content">
     <h3><?= __('Vergangene Veranstaltungen') ?></h3>
@@ -90,5 +104,12 @@ use Cake\I18n\Time;
         <?php endforeach; ?>
         </tbody>
     </table>
+</div>
+<div class="row">
+    <div class="col-12">
+        <?php foreach ($Clans as $clan): ?>
+        <?= $this->Html->link($clan->short,["action"=> "eventlist",$clan->id],["class"=>"btn btn-dark"])?>
+        <?php endforeach; ?>
+    </div>
 </div>
 <?= $this->element('DataTables', ['orderCol' => 3, 'order' => 'asc']) ?>

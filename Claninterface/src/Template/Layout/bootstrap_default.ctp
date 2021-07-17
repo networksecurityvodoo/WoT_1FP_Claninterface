@@ -47,6 +47,12 @@ $isAdmin = true;
 
 $isOnlyPlayer = false;
 
+
+$container_class = "container";
+if(isset($container)){
+    $container_class  = $container;
+}
+
 ?>
 <!DOCTYPE html>
 <head lang="<?= $lang ?>" class="no-js">
@@ -118,7 +124,7 @@ $isOnlyPlayer = false;
         <?php endif; ?>
     </div>
 </nav>
-<div class="container">
+<div class="<?= $container_class ?>">
     <br/>
     <?= $this->fetch('tb_breadcrumb'); ?>
 
