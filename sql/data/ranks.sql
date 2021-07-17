@@ -1,0 +1,11 @@
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (1, 'commander', 'Kommandant', 1100, 1, '2021-01-07 22:55:43', '2021-01-07 22:55:43');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (2, 'executive_officer', 'Ausführender Offizier', 1000, 1, '2021-01-07 22:55:59', '2021-01-07 22:55:59');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (3, 'personnel_officer', 'Personaloffizier', 900, 0, '2021-01-07 22:56:19', '2021-01-07 22:56:19');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (4, 'combat_officer', 'Kampfoffizier', 800, 0, '2021-01-07 22:56:31', '2021-01-07 22:56:31');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (5, 'intelligence_officer', 'Geheimdienstoffizier', 700, 0, '2021-01-07 22:56:49', '2021-01-07 22:56:49');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (6, 'quartermaster', 'Quartiermeister', 600, 0, '2021-01-07 22:57:03', '2021-01-07 22:57:03');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (7, 'recruitment_officer', 'Rekrutierungsoffizier', 500, 0, '2021-01-07 22:57:21', '2021-01-07 22:57:21');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (8, 'junior_officer', 'Unteroffizier', 400, 0, '2021-01-07 22:57:40', '2021-01-07 22:57:40');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (9, 'private', 'Gefreiter', 300, 0, '2021-01-07 22:57:52', '2021-01-07 22:57:52');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (10, 'recruit', 'Rekrut', 200, 0, '2021-01-07 22:58:18', '2021-01-07 22:58:18');
+INSERT INTO ranks (id, name, speekName, sort, isComando, created, modified) VALUES (11, 'reservist', 'Reservist', 100, 0, '2021-01-07 22:58:26', '2021-01-07 22:58:26');
