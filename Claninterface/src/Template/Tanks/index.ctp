@@ -51,4 +51,4 @@ use App\Logic\Helper\StringHelper;
         </tbody>
     </table>
 </div>
-<?= $this->element('DataTables', ['orderCol' => 1, 'order' => 'asc']) ?>
+<?= $this->element('DataTables', ['orderCol' => 2, 'order' => 'desc']) ?>

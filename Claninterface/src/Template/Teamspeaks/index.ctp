@@ -63,4 +63,4 @@ use App\Model\Entity\Teamspeak;
     </table>
 
 </div>
-<?= $this->element('DataTables', ['orderCol' => 1, 'order' => 'asc']) ?>
+<?= $this->element('DataTables', ['orderCol' => 3, 'order' => 'desc']) ?>
