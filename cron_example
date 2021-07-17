@@ -1,0 +1,8 @@
+#meine Crontab Datei, gerne anpassen
+# m h  dom mon dow   command
+*/3 * * * * /Claninterface/bin/cake Teamspeak
+0 3,15,23 * * * /Claninterface/bin/cake Import
+15 16,17,18,19,20,21,22 * * * /Claninterface/bin/cake Notice
+0 3 * * * /Claninterface/bin/cake Stats
+0 1 */7 * * /Claninterface/bin/cake CleanData
+*/6 * * * * /Claninterface/bin/cake Meeting
