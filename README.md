@@ -53,7 +53,7 @@ Einige Aufrufe müssen regelmäßig durchgeführt werden, ich habe ein beispiel 
 ## Referenzen
 
 - WG-API https://developers.wargaming.net/documentation/guide/getting-started/
-- PHP WG-API https://github.com/artur-stepien/wargaming-papi/blob/master/api.php
+- PHP WG-API https://github.com/artur-stepien/wargaming-papi
 - WN8 Berechnung http://forum.worldoftanks.eu/index.php?/topic/547149-wn8-formula-detailed-breakdown-stat-nerds-should-drop-by/
 - WN8 Erwarte Werte (XVM) https://modxvm.com/en/wn8-expected-values/
 - Teamspeak 3 - Server Framework https://github.com/planetteamspeak/ts3phpframework
