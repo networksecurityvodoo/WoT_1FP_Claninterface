@@ -81,25 +81,6 @@ if(isset($container)){
     <?= $this->Html->script('jquery-ui.min.js') ?>
     <script>jQuery.fn.tooltip = _tooltip;</script>
     <?= $this->fetch('js'); ?>
-    <style>
-        .copyright-lfs96 {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-weight: bold;
-            font-family: consolas, monospace;
-            font-size: 0.9rem;
-        }
-
-        .copyright-lfs96 a, .copyright-lfs96 a:link {
-            color: darkslategray;
-        }
-
-        .copyright-lfs96 a:hover {
-            color: #6d9521;
-        }
-    </style>
-
 <body>
 <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container">
@@ -135,13 +116,13 @@ if(isset($container)){
     <?= $this->fetch('tb_footer'); ?>
 </div>
 <span class="copyright-lfs96">by LFS96
-    <?= $this->Html->link('<i class="bi bi-github"></i>', 'https://github.com/LFS96', ["escape" => false, "target" => "_blank"]) ?>
+    <?= $this->Html->link('<i class="bi bi-github"></i>', 'https://github.com/LFS96/WoT_1FP_Claninterface', ["escape" => false, "target" => "_blank"]) ?>
     <?= $this->Html->link('<i class="bi bi-telegram"></i>', 'https://t.me/FabiGothic', ["escape" => false, "target" => "_blank"]) ?>
     <?= $this->Html->link('<i class="bi bi-instagram"></i>', 'https://instagram.com/fabigothic/', ["escape" => false, "target" => "_blank"]) ?><br/>
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img
-            alt="Creative Commons Lizenzvertrag" style="border-width:0"
-            src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
-            title="Dieses Werk ist lizenziert unter einer Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz"/></a>
+    <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank"><img
+            alt="GNU GENERAL PUBLIC LICENSE" style="border-width:0"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg"
+            title="Dieses Werk ist lizenziert unter einer GNU GENERAL PUBLIC LICENSE"/></a>
 </span>
 <?= $this->fetch('scriptBottom'); ?>
 </body>

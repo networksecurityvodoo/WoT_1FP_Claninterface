@@ -91,4 +91,22 @@
   color: #0a0842;
 }
 
+.copyright-lfs96 {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-family: consolas, monospace;
+  font-size: 0.9rem;
+}
+.copyright-lfs96 a, .copyright-lfs96 a:link {
+  color: darkslategray;
+}
+.copyright-lfs96 a:hover {
+  color: #6d9521;
+}
+.copyright-lfs96 img {
+  height: 32px;
+}
+
 /*# sourceMappingURL=default.css.map */
