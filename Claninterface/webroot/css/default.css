@@ -109,4 +109,8 @@
   height: 32px;
 }
 
+.jumbotron.jumbotron-fluid {
+  padding: 2rem 0.5rem;
+}
+
 /*# sourceMappingURL=default.css.map */

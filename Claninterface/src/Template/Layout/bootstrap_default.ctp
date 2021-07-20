@@ -125,5 +125,8 @@ if(isset($container)){
             title="Dieses Werk ist lizenziert unter einer GNU GENERAL PUBLIC LICENSE"/></a>
 </span>
 <?= $this->fetch('scriptBottom'); ?>
+<script>
+    $(document).ready(function (){$('[data-toggle="tooltip"]').tooltip();});
+</script>
 </body>
 </html>
