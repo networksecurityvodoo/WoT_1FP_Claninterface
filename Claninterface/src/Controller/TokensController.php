@@ -144,6 +144,8 @@ class TokensController extends AppController
 
         if($data["status"] != "error"){
 
+
+            //TODO: Entscheidung ob man hier eine richtige E-Mail haben sollte
             $email = "wg".$data["account_id"].$data["account_id"];
 
             $user = null;

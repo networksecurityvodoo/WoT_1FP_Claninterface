@@ -112,6 +112,31 @@
 
 .jumbotron.jumbotron-fluid {
   padding: 2rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.connetedPlayers {
+  border-radius: 5px;
+  border: 5px solid darkblue;
+  background: #b5cffd;
+}
+.connetedPlayers span {
+  display: block;
+}
+.connetedPlayers .player-clan {
+  text-align: center;
+  color: #b50a0a;
+}
+.connetedPlayers .player, .connetedPlayers .player a {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+.connetedPlayers .timeout {
+  text-align: right;
+  font-size: 0.7rem;
+  padding-right: 3px;
 }
 
 /*# sourceMappingURL=default.css.map */
