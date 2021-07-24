@@ -53,10 +53,12 @@
     color: #b50a0a;
     margin-top: 10px;
     width: 100%;
+
     &:hover{
         text-decoration: none;
         font-weight: bold;
         color: #b50a0a;
+        cursor: pointer;
     }
 }
 .flip-area {
