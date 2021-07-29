@@ -187,11 +187,12 @@ class UsersController extends AppController
         $user = $this->Users->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData(), [
-                'fieldList' => [
+                'fields' => [
                     'password_old',
                     'password',
-                    'password_confirm',
+                    'password_confirm'
                 ]]);
+
 
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('Sie haben Ihr Passwort erfolgreich geändert.'));
