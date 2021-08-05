@@ -40,8 +40,8 @@ return [
     "Wargaming" => [
         "authkey" => '0123456789abcdef0123456789abcdef',
         'expectedValues' => 'https://static.modxvm.com/wn8-data-exp/json/wn8exp.json',
-        'lang' => 'de',
-        'server' => 'api.worldoftanks.eu'
+        'lang' => (new \Wargaming\Language\DE()),
+        'server' => (new \Wargaming\Server\EU(""))
     ],
     /*
      * Einstellungen zu Spielerdaten
