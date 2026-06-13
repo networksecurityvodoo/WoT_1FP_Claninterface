@@ -748,4 +748,40 @@ Aus dem README und Code-Analyse:
 
 ---
 
+## 14. EOL-Status & Migrationsnotwendigkeit
+
+> **Diese Sektion ist sicherheitsrelevant. Bitte vor jedem Produktiveinsatz lesen.**
+
+### Betroffene Komponenten
+
+| Komponente | Eingesetzte Version | EOL seit | Aktuelle Version |
+|---|---|---|---|
+| **CakePHP** | 3.9.x | Dez. 2023 | 5.x |
+| **PHP** | >= 7.3 (Minimum) | Nov. 2021 (7.3), Nov. 2022 (7.4), Nov. 2023 (8.0) | 8.3 (aktiv) |
+| **jQuery** | 3.5.1 | — (veraltet) | 3.7.x |
+| **phpunit** | ^5\|^6 | — | 10.x / 11.x |
+| **Bootstrap** | 4.x (eingebettet) | — (kein aktiver Support) | 5.x |
+
+### Konsequenzen des EOL-Status
+
+- **Keine Security-Patches mehr** für CakePHP 3.9 und PHP < 8.1. Bekannte CVEs werden nicht mehr geschlossen.
+- **GitHub Dependabot meldet bereits 9 Schwachstellen** im Repository (1 Critical, 2 High, 1 Moderate, 5 Low) — direkt auf den EOL-Status der Abhängigkeiten zurückzuführen.
+- Neu entdeckte Sicherheitslücken in CakePHP 3.x, PHP 7.x oder den eingebetteten JS-Bibliotheken werden **nicht mehr behoben**.
+- Kein offizieller Support für Bugreports gegen CakePHP 3.9.
+
+### Migrations-Status im Repository
+
+Ein Migrations-Branch `dev-cakephp_43` / Tag `Claninterface_1.1_cakephp4.3` existiert bereits und enthält substantielle Fortschritte:
+
+- CakePHP 3 → 4.3 abgeschlossen (Templates `.ctp` → `.php`, neue Middleware-Struktur)
+- `Auth`-Component → `Authentication` + `Authorization` Plugin migriert
+- `RightsHelper` auf rollenbasierte `readonly`-Properties umgebaut (statt numerischem Level)
+- PHP-Mindestanforderung auf `>=8.1` angehoben
+- Docker-Setup (`docker/`) hinzugefügt
+- SSL-Verifikation bleibt jedoch weiterhin deaktiviert (`setSSLVerification(false)`) — **noch nicht behoben**
+
+Die vollständige Migrationsstrategie ist in [MIGRATION_ROADMAP.md](./MIGRATION_ROADMAP.md) beschrieben.
+
+---
+
 *Dokumentation erstellt auf Basis des Quellcode-Stands im `main`-Branch, Juni 2026.*
